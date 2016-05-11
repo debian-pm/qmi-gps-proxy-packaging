@@ -354,7 +354,7 @@ int handle_gps_ind(int sock,int dev)
 
 	dbgprintf("[GPS] packet; from: %d:%d\n", sq.sq_node, sq.sq_port);
 	if (dbgprintf_enabled)
-		print_hex_dump("[GPS <-]", buf, ret);
+		print_hex_dump("[GPS <-]", buf, len);
 
 	return 0;
 }
