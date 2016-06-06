@@ -1,0 +1,17 @@
+Source: qmi-gps-proxy
+Section: utils
+Priority: optional
+Maintainer: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+Build-Depends: cdbs, debhelper (>= 7), qmic, libqrtr-dev
+Standards-Version: 3.9.3
+Homepage: https://git.linaro.org/landing-teams/working/qualcomm/pkg/qmi_loc2.git
+Vcs-Git: https://git.linaro.org/landing-teams/working/qualcomm/pkg/qmi_loc2.git
+Vcs-Browser: https://git.linaro.org/landing-teams/working/qualcomm/pkg/qmi_loc2.git
+
+Package: qmi-gps-proxy
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ qdsp-start,
+Description: QCOM GPS proxy daemon.

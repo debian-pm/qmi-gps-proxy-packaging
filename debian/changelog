@@ -1,0 +1,5 @@
+qmi-gps-proxy (0.0+0+df3b976-1) jessie; urgency=low
+
+  * Initial Release.
+
+ -- Nicolas Dechesne <nicolas.dechesne@linaro.org>  Fri, 03 Jun 2016 12:53:23 +0000
