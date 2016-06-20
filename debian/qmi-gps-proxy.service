@@ -1,0 +1,11 @@
+[Unit]
+Description=Start GPS daemon on QC chipset
+After=systemd-remount-fs.service
+
+[Service]
+ExecStart=/usr/bin/gps_proxy -v
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
