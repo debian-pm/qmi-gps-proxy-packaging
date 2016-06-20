@@ -1,2 +1,2 @@
 
-KERNEL=="ttyGPS0", TAG+="systemd", ENV{SYSTEMD_WANTS}+="gpsdctl@%k.service"
+SUBSYSTEM=="qcom_smd", ACTION=="add", KERNEL=="qcom,smd-modem.ipcrtr_requests", TAG+="systemd", ENV{SYSTEMD_WANTS}+="gnss-gpsd.service"

@@ -1,0 +1,12 @@
+[Unit]
+Description=Register QCOM GPS into GPSD
+After=systemd-remount-fs.service qmi-gps-proxy.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/gpsdctl add /dev/ttyGPS0
+ExecStop=/usr/sbin/gpsdctl remove /dev/ttyGPS0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
