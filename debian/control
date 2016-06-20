@@ -18,5 +18,5 @@ Description: QCOM GPS proxy daemon.
 
 Package: gnss-gpsd
 Architecture: all
-Depends: gpsd
+Depends: gpsd, qmi-gps-proxy (= ${binary:Version})
 Description: QCOM GPS integration to GPSD
