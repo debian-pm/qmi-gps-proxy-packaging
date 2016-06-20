@@ -1,3 +1,9 @@
+qmi-gps-proxy (0.0+0+df3b976-2) jessie; urgency=medium
+
+  * debian: make sure gnss-gpsd depends on qmi gps proxy
+
+ -- Nicolas Dechesne <nicolas.dechesne@linaro.org>  Mon, 20 Jun 2016 22:58:39 +0300
+
 qmi-gps-proxy (0.0+0+df3b976-1) jessie; urgency=low
 
   * Initial Release.
