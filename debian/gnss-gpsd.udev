@@ -1,0 +1,2 @@
+
+KERNEL=="ttyGPS0", TAG+="systemd", ENV{SYSTEMD_WANTS}+="gpsdctl@%k.service"

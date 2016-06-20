@@ -15,3 +15,8 @@ Depends:
  ${misc:Depends},
  qdsp-start,
 Description: QCOM GPS proxy daemon.
+
+Package: gnss-gpsd
+Architecture: all
+Depends: gpsd
+Description: QCOM GPS integration to GPSD
