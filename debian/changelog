@@ -1,3 +1,9 @@
+qmi-gps-proxy (0.0+0+df3b976-3) jessie; urgency=medium
+
+  * debian: add gnss-gpsd init service
+
+ -- Nicolas Dechesne <nicolas.dechesne@linaro.org>  Tue, 21 Jun 2016 11:53:31 +0200
+
 qmi-gps-proxy (0.0+0+df3b976-2) jessie; urgency=medium
 
   * debian: make sure gnss-gpsd depends on qmi gps proxy
