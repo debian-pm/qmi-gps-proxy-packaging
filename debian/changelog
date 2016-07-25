@@ -1,3 +1,9 @@
+qmi-gps-proxy (0.0+0+df3b976-4) jessie; urgency=medium
+
+  * debian: add fix for gps_proxy exit
+
+ -- Nicolas Dechesne <nicolas.dechesne@linaro.org>  Mon, 25 Jul 2016 15:29:23 +0400
+
 qmi-gps-proxy (0.0+0+df3b976-3) jessie; urgency=medium
 
   * debian: add gnss-gpsd init service
