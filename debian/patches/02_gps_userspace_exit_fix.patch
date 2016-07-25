@@ -1,0 +1,26 @@
+From 3eb98a0fc7f4555118511947b252b951a8ee174c Mon Sep 17 00:00:00 2001
+From: Anna Hanna Sedlak Grinbaum <asedla@codeaurora.org>
+Date: Sun, 3 Jul 2016 12:58:44 +0300
+Subject: [PATCH] Add a check of registration success to QGPS.
+
+Change-Id: I4a787830544b22bfe947c03cc28a9e9c5342797d
+Signed-off-by: Anna Hanna Sedlak Grinbaum <asedla@codeaurora.org>
+---
+ gps_userspace_proxy/gps_proxy.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+Index: b/gps_proxy.c
+===================================================================
+--- a/gps_proxy.c	2016-07-21 20:08:44.684370019 +0400
++++ b/gps_proxy.c	2016-07-21 20:08:44.680370102 +0400
+@@ -391,6 +391,10 @@
+ 	
+ 	for (;;) {
+ 		ret = ioctl(ch_fd, QGPS_REGISTER_HANDLE, 0);
++		if (ret < 0) {
++			fprintf(stderr, "failed at QGPS_REGISTER_HANDLE");
++			goto clean;
++		}
+ 
+ 		ret = gps_send_register_nmea_event(gps_fd,g_loc_node,g_loc_port);
+ 		if (ret < 0) {
