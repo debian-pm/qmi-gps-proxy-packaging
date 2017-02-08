@@ -1,3 +1,9 @@
+qmi-gps-proxy (0.0+0+df3b976-5) stretch; urgency=medium
+
+  * debian: gps_proxy: Adding fflush when all devices are disconected.
+
+ -- Nicolas Dechesne <nicolas.dechesne@linaro.org>  Wed, 08 Feb 2017 22:10:07 +0100
+
 qmi-gps-proxy (0.0+0+df3b976-4) jessie; urgency=medium
 
   * debian: add fix for gps_proxy exit
