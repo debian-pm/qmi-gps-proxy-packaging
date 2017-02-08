@@ -1,0 +1,33 @@
+From 0f8a39421dc1bacb342d87a6f49c2d4ef6a770cc Mon Sep 17 00:00:00 2001
+From: Yossi Mansharoff <yossim@codeaurora.org>
+Date: Sun, 27 Nov 2016 15:04:47 +0200
+Subject: [PATCH] Adding fflush when all devices are disconected.
+
+Change-Id: Ib1bfd9625c8bf1baedff79ede0cbba294378d920
+---
+ gps_proxy.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/gps_proxy.c b/gps_proxy.c
+index 9980932..46a0ec2 100644
+--- a/gps_proxy.c
++++ b/gps_proxy.c
+@@ -423,6 +423,7 @@ int main(int argc, char **argv)
+ 			ret = ioctl(ch_fd, QGPS_IS_ACTIVE, 0);
+ 			if (0!=ret) {
+ 				dbgprintf("All clients have disconnected\n");
++				fflush(stdout);
+ 				break;
+ 			}
+ 		}
+@@ -432,6 +433,7 @@ int main(int argc, char **argv)
+ 			fprintf(stderr, "failed to send LOC_STOP");
+ 			goto clean;
+ 		}
++		fflush(stdout);
+ 	}
+ clean:
+ 	qrtr_close(gps_fd);
+-- 
+2.11.0
+

@@ -1,2 +1,3 @@
 fix_makefile.patch
 02_gps_userspace_exit_fix.patch
+0001-Adding-fflush-when-all-devices-are-disconected.patch
