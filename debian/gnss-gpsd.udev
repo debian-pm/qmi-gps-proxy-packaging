@@ -1,2 +1,3 @@
 
 SUBSYSTEM=="qcom_smd", ACTION=="add", KERNEL=="qcom,smd-modem.ipcrtr_requests", TAG+="systemd", ENV{SYSTEMD_WANTS}+="gnss-gpsd.service"
+ACTION=="add", DRIVER=="qcom_smd_qrtr", ATTRS{rpmsg_name}=="hexagon", TAG+="systemd", ENV{SYSTEMD_WANTS}+="gnss-gpsd.service"
