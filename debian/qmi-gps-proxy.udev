@@ -1,3 +1,0 @@
-
-SUBSYSTEM=="qcom_smd", ACTION=="add", KERNEL=="qcom,smd-modem.ipcrtr_requests", TAG+="systemd", ENV{SYSTEMD_WANTS}+="qmi-gps-proxy.service"
-

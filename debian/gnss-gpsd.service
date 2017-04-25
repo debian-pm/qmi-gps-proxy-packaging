@@ -1,6 +1,7 @@
 [Unit]
 Description=Register QCOM GPS into GPSD
 After=systemd-remount-fs.service qmi-gps-proxy.service
+Wants=qmi-gps-proxy.service
 
 [Service]
 Type=oneshot
