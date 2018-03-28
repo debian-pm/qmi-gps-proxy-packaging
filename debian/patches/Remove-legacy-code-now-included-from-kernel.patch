@@ -1,0 +1,18 @@
+Last-Update: 2018-03-28
+
+--- qmi-gps-proxy-0.0+0+df3b976.orig/gps_proxy.c
++++ qmi-gps-proxy-0.0+0+df3b976/gps_proxy.c
+@@ -66,13 +66,6 @@ struct qmi_packet {
+ 	uint8_t data[];
+ } __attribute__((__packed__));
+ 
+-/* TODO: include from kernel once it lands */
+-struct sockaddr_qrtr {
+-	unsigned short sq_family;
+-	uint32_t sq_node;
+-	uint32_t sq_port;
+-};
+-
+ static unsigned g_txn = 1;
+ static uint8_t g_session_id = 0;
+ static uint32_t g_loc_node = -1;

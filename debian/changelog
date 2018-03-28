@@ -1,3 +1,9 @@
+qmi-gps-proxy (0.0+0+df3b976-7) UNRELEASED; urgency=medium
+
+  * Update to debhelper 11 and standards-version 4.1.3
+
+ -- Jonah Brüchert <jbb.mail@gmx.de>  Wed, 28 Mar 2018 13:59:14 +0200
+
 qmi-gps-proxy (0.0+0+df3b976-6) stretch; urgency=medium
 
   * debian: fix service dependencies
